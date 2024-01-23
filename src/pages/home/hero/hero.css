@@ -1,0 +1,134 @@
+/* YourComponent.css */
+.hero {
+  background-image: url('bg.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  width: 85%;
+  
+}
+
+.hero .container {
+  padding-top: 10%;
+ width: 70%;
+
+}
+
+.hero h1 {
+  color: #03000a;
+  font-size: 50px;
+}
+
+.hero p {
+  color: #0b031b;
+  opacity: 0.8;
+  font-size: 25px;
+}
+
+form {
+  border-radius: 5px;
+  margin-top: 50px;
+  padding: 0 20px;
+  background-color: rgb(133, 175, 179);
+}
+
+form input {
+  padding: 3px;
+  border: 1px solid rgba(128, 128, 128, 0.2);
+  margin-top: 7px;
+  border-radius: 5px;
+}
+
+form span {
+  font-size: 14px;
+  color: rgb(12, 7, 7);
+}
+
+input::placeholder {
+  font-size: 17px;
+  padding: 10px;
+  color: black;
+}
+
+form .box {
+  padding: 15px;
+  border-left: 1px solid rgba(128, 128, 128, 0.2);
+}
+
+form .box:nth-child(1) {
+  border-left: none;
+}
+
+form h4 {
+  font-weight: 500;
+}
+
+@media screen and (max-width: 800px) {
+  .hero .container {
+    padding-top: 30%;
+  }
+
+  form {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  form .box {
+    border-left: none;
+  }
+
+  form input {
+    width: 100%;
+  }
+}
+
+/* Additional Styles (if needed) */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.box {
+  flex: 1 1 calc(25% - 10px);
+  margin: 0 5px;
+}
+
+.box span {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+input[type='text'] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #852727;
+  border-radius: 5px;
+  color: #333;
+  background-color: white;
+}
+
+h4 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.btn1 {
+  background-color: #fff;
+  color: #3498db;
+  padding: 7px ;
+  border: none;
+  cursor: pointer;
+}
+
+.btn1:hover {
+  background-color: #ecf0f1;
+}
