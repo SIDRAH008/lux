@@ -1,34 +1,24 @@
-import React from 'react';
-import "./index.css";
+import { useState, useEffect } from "react";
 
-const PropertyPage = () => {
+const PropertyList = () => {
+  const [properties, setProperties] = useState([]);
+
+  useEffect(() => {
+    // Fetch data from the API endpoint
+    fetch('/api/properties')
+      .then((response) => response.json())
+      .then((data) => setProperties(data));
+  }, []);
+
   return (
-    <div className="property-page">
-      <header>
-        <h1>Property Details</h1>
-      </header>
-
-      <section className="property-details">
-        <h2>Property Name</h2>
-        <p>Description of the property goes here.</p>
-        <h2>Features</h2>
-        <ul>
-          <li>Feature 1</li>
-          <li>Feature 2</li>
-          <li>Festure 3</li>
-          <li>Feature 4 </li>
-          <li>Feature 5</li>
-                    {/* Add more features as needed */}
-        </ul>
-
-
-        <h2>Price</h2>
-        <p>$1,000,000</p>
-
-        {/* Add more details as needed */}
-      </section>
-    </div>
+    <ul>
+      {properties.map((property) => (
+        <li key={property.id}>
+          {property.title} ({property.type}) - {property.price}
+        </li>
+      ))}
+    </ul>
   );
 };
 
-export default PropertyPage;
+export default PropertyList;
