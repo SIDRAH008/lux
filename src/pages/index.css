@@ -609,6 +609,7 @@ header {
 h1 {
   text-align: center;
   color: #333;
+  background-image: url('se.jpg');
 }
 
 img {
