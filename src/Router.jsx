@@ -5,8 +5,7 @@ import ServicePage from "./pages/services";
 import Chatbot from "./pages/chatbot";
 import MortgageCalculator from "./pages/mortgage";
 import Contact from "./pages/contact";
-import Dashbord from "./pages/Dashbord/login";
-//import PropertList from "./pages/properties"
+import Dashbord from "./pages/login";
 import PropertyList from "./pages/properties";
 
 
