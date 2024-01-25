@@ -7,6 +7,7 @@ import MortgageCalculator from "./pages/mortgage";
 import Contact from "./pages/contact";
 import Dashbord from "./pages/login";
 import PropertyList from "./pages/properties";
+import Footer from "./component/footer";
 
 
 const Router = () => {
@@ -24,6 +25,7 @@ const Router = () => {
           <Route path="/mortgage" element={<MortgageCalculator />} />
         </Routes>
       </div>
+      <Footer/>
     </BrowserRouter>
   );
 };
