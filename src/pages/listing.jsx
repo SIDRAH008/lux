@@ -32,7 +32,7 @@ export default function Listing() {
       try {
         setLoading(true);
         const res = await axios(
-          `http://localhost:3000/api/listing/get/${params.listingId}`
+          ``
         );
         const data = await res.data;
         if (data.success === false) {
