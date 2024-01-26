@@ -1,6 +1,6 @@
 // ServicePage.jsx
 import React from "react";
-import "./index.css"; // Import the CSS file
+//import "./index.css"; // Import the CSS file
 
 const ServicePage = () => {
   return (

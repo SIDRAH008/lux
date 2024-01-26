@@ -44,7 +44,7 @@ section {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background:wheat;
+  background-color: #ccc;
   padding: 0.1rem 0.5%;
   height: 80px;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
@@ -224,21 +224,8 @@ section {
   border-radius: 0.5rem;
   color: white;
 }
-.signup:hover {
-  background: transparent;
-  padding: 0.5rem 2rem;
-  border: 2px solid #fac031;
-  border-radius: 0.5rem;
-  color: grey;
-}
-.logout {
-  background: transparent;
-  padding: 0.5rem 2rem;
-  border: 2px solid #fac031;
-  border-radius: 0.5rem;
-  color: grey;
-  font-size: 17px;
-}
+
+  
 .logout:hover {
   background: #fac031;
   padding: 0.5rem 2rem;
@@ -491,80 +478,7 @@ ul {
   justify-content: space-between;
   padding: 84px;
 }
-.category-container {
-  background-color: transparent;
-  box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.3);
-  padding: 40px;
-}
-.category {
-  background-color: white;
-  font-size: 29px;
-}
-.category-heading {
-  font-size: 18px;
-}
-.cat-container {
-  margin: 20px 30px;
-  overflow-y: hidden;
-}
 
-.cart-page {
-  border: 0.5px solid rgb(208, 208, 208);
-  border-radius: 5px;
-  align-items: center;
-  justify-content: space-between;
-  padding: 4px;
-  margin-right: 17px;
-}
-
-/* category styling */
-.Category-container {
-  margin-top: 17%;
-  background-color: rgb(255, 255, 255);
-  height: 400px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  width: 240px;
-  text-align: left;
-  padding: 34px;
-}
-.Category-container h2 {
-  font-size: 2.1rem;
-  padding: 12px 0px;
-  color: #666;
-}
-.Category-container .cat-button {
-  display: inline-block;
-  padding: 0.1rem 2rem;
-  width: 150px;
-  border: 0.1rem solid #fac031;
-  color: #fac031;
-  cursor: pointer;
-  font-size: 0.9rem;
-  border-radius: 0.5rem;
-  position: relative;
-  overflow: hidden;
-  z-index: 0;
-  margin-top: 1rem;
-}
-.Category-container .cat-button:active {
-  background-color: #fac031;
-  color: black;
-}
-
-.Menu-Searchbar {
-  border: 1px solid rgb(172, 170, 170);
-  padding: 10px;
-  border-radius: 4px;
-  width: 700px;
-  background-color: transparent;
-}
-.Menu-Searchbar:active {
-  background-color: white;
-}
-
-/* property-page.css */
 .property-page {
   font-family: 'Arial', sans-serif;
   background-color: #f4f4f4;

@@ -15,6 +15,7 @@ const Footer = () => {
         style={{
             height:" 150px",
           display: "flex",
+          position:"static",
           alignItems: "center",
           justifyContent: "space-evenly",
           margin: "0px 60px",

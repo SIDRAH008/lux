@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import "./index.css";
+//import "./index.css";
 import logo from "./lux.png";
 const Navbar = () => {
   return (
@@ -32,8 +32,9 @@ const Navbar = () => {
         <NavLink to="/chatbot" className="navlinks">
           Chatbot
         </NavLink>
+
        
-        <NavLink to="/" className="navlinks">
+        <NavLink to="/listing" className="navlinks">
           List Your Property
         </NavLink>
       </div>

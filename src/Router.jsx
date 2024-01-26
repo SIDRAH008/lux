@@ -5,9 +5,10 @@ import ServicePage from "./pages/services";
 import Chatbot from "./pages/chatbot";
 import MortgageCalculator from "./pages/mortgage";
 import Contact from "./pages/contact";
-import Dashbord from "./pages/login";
 import PropertyList from "./pages/properties";
 import Footer from "./component/footer";
+import Login from "./pages/login";
+import Listing from "./pages/listing";
 
 
 const Router = () => {
@@ -17,11 +18,12 @@ const Router = () => {
       <div className="main-content">
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path ="/listing" elemnt ={<Listing/>}/>
           <Route path="/chatbot" element={<Chatbot />} />
           <Route path="/properties" element={<PropertyList />} />
           <Route path="/service" element={<ServicePage />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path ="/login" element ={<Dashbord/>} />
+          <Route path ="/login" element ={<Login/>}/>
           <Route path="/mortgage" element={<MortgageCalculator />} />
         </Routes>
       </div>
