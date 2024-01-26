@@ -95,6 +95,12 @@ const Hero = () => {
               value={rent}
               onChange={handleRentChange}
             />
+             <option value="monthly">Monthly</option>
+      <option value="yearly">Yearly</option>
+      <option value="monthly">Weekly</option>
+      <option value="yearly">Daily</option>
+      <option value="monthly">Any</option>
+
           </div>
 
           <div className="box">
