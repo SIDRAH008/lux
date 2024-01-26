@@ -492,103 +492,49 @@ header {
   padding: 1em;
 }
 
-.property-details {
+.hero {
+  background-color: #f5f5f5;
+  padding: 50px 0;
+}
+
+.container {
   max-width: 800px;
-  margin: 20px auto;
-  padding: 20px;
-  background-color: #fff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
 }
 
-.property-details h2 {
-  color: #333;
-  border-bottom: 1px solid #ccc;
-  padding-bottom: 10px;
-  margin-top: 20px;
+.box {
+  margin-bottom: 20px;
 }
 
-.property-details ul {
-  list-style-type: none;
-  padding: 0;
+input,
+select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
 }
 
-.property-details li {
+label {
+  display: block;
   margin-bottom: 5px;
 }
 
-.property-details p {
-  margin-bottom: 20px;
-}
-/* ServicePage.css */
-h1 {
-  text-align: center;
-  color: #333;
-  
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-  margin: 20px 0;
-}
-
-p {
-  font-size: 16px;
-  line-height: 1.5;
-  color: #555;
-}
-/* Chatbot.css */
-.chat-container {
-  max-width: 400px;
-  margin: auto;
-  padding: 50px;
-  border: 2px solid #ccc;
+.btn1 {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 15px;
+  border: none;
   border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.chat-box {
-  overflow-y: auto;
-  max-height: 400px;
-  margin-bottom: 10px;
-  border: 1px solid #ccc;
-  padding: 10px;
-}
-
-.input-container {
-  display: flex;
-}
-
-#user-input {
-  flex-grow: 1;
-  margin-right: 10px;
-}
-
-#send-btn {
   cursor: pointer;
 }
 
-/* index.css */
-.service-container h1 {
-  
-  margin: 100px;
-  padding: 80px;
-  background-image: url('se.jpg');
+.btn1 i {
+  margin-right: 5px;
 }
 
-
-.service-text {
-  font-size: 16px;
-  line-height: 1.6;
-}
-/* index.css */
-
-.chat-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 50vh; /* Set height to 100% of the viewport height */
+/* Add additional styling for radio buttons if needed */
+input[type="radio"] {
+  margin-right: 5px;
 }
 
-/* Add the rest of your existing styles below this point */

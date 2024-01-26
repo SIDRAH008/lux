@@ -1,137 +1,110 @@
-import React, { useState } from "react";
-import Heading from "../../common/Heading";
+// components/SearchForm.js
+import React, { useState } from 'react';
 import "./hero.css";
 
-const Hero = () => {
-  const [location, setLocation] = useState("");
-  const [propertyType, setPropertyType] = useState("");
-  const [priceRange, setPriceRange] = useState("");
-  const [rent, setRent] = useState("");
-  const [area, setArea] = useState("");
-  const [bedrooms, setBedrooms] = useState("");
-
-  const handleLocationChange = (e) => {
-    setLocation(e.target.value);
-  };
-
-  const handlePropertyTypeChange = (e) => {
-    setPropertyType(e.target.value);
-  };
-
-  const handlePriceRangeChange = (e) => {
-    setPriceRange(e.target.value);
-  };
-
-  const handleRentChange = (e) => {
-    setRent(e.target.value);
-  };
-
-  const handleAreaChange = (e) => {
-    setArea(e.target.value);
-  };
-
-  const handleBedroomsChange = (e) => {
-    setBedrooms(e.target.value);
-  };
+const SearchForm = ({ onSearch }) => {
+  const [location, setLocation] = useState('');
+  const [rent, setRent] = useState('');
+  const [price, setPrice] = useState('');
+  const [forRent, setForRent] = useState('');
+  const [bedrooms, setBedrooms] = useState('');
+  const [propertyType, setPropertyType] = useState('');
+  const [amenities, setAmenities] = useState('');
 
   const handleSearch = () => {
-    // Perform search with the selected filters
-    // You can use the state variables (location, propertyType, priceRange, rent, area, bedrooms) for your search logic
-    console.log("Performing search with filters:", {
-      location,
-      propertyType,
-      priceRange,
-      rent,
-      area,
-      bedrooms,
-    });
+    // Call the onSearch prop with the current search criteria
+    onSearch({ location, rent, price, forRent, bedrooms, propertyType, amenities });
   };
 
   return (
-    <section className="hero">
-      <div className="container">
-        <Heading title="Search Your Next Home " subtitle="Find new & featured property " />
-
-        <form className="flex">
-          <div className="box">
-            
-            <input
-              type="text"
-              id="location"
-              placeholder="Enter location"
-              value={location}
-              onChange={handleLocationChange}
-            />
-          </div>
-
-          <div className="box">
-            <label htmlFor="propertyType"></label>
-            <input
-              type="text"
-              id="propertyType"
-              placeholder="Property Type"
-              value={propertyType}
-              onChange={handlePropertyTypeChange}
-            />
-          </div>
-
-          <div className="box">
-            <label htmlFor="priceRange"></label>
-            <input
-              type="number"
-              id="priceRange"
-              placeholder="Price Range"
-              value={priceRange}
-              onChange={handlePriceRangeChange}
-            />
-          </div>
-
-          <div className="box">
-            <label htmlFor="rent"></label>
-            <input
-              type="text"
-              id="rent"
-              placeholder="Rent"
-              value={rent}
-              onChange={handleRentChange}
-            />
-             <option value="monthly">Monthly</option>
-      <option value="yearly">Yearly</option>
-      <option value="monthly">Weekly</option>
-      <option value="yearly">Daily</option>
-      <option value="monthly">Any</option>
-
-          </div>
-
-          <div className="box">
-            <label htmlFor="area"></label>
-            <input
-              type="text"
-              id="area"
-              placeholder="Area"
-              value={area}
-              onChange={handleAreaChange}
-            />
-          </div>
-
-          <div className="box">
-            <label htmlFor="bedrooms"></label>
-            <input
-              type="text"
-              id="bedrooms"
-              placeholder="Bedrooms"
-              value={bedrooms}
-              onChange={handleBedroomsChange}
-            />
-          </div>
-
-          <button className="btn1" type="button" onClick={handleSearch}>
-            <i className="fa fa-search"> Find</i>
-          </button>
-        </form>
+    <div className="container mx-auto p-4 lg:w-3/4 xl:w-2/3">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="search-input mb-4">
+          <label htmlFor="location">Location:</label>
+          <select
+            id="location"
+            value={location}
+            onChange={(e) => setLocation(e.target.value)}
+            className="w-full border p-2 rounded-md"
+          >
+            <option value="">Any</option>
+            <option value="city1">City 1</option>
+            <option value="city2">City 2</option>
+          </select>
+        </div>
+       
+        <div className="search-input mb-4">
+          <label htmlFor="price">Price:</label>
+          <input
+            type="text"
+            id="price"
+            placeholder="Enter price"
+            value={price}
+            onChange={(e) => setPrice(e.target.value)}
+            className="w-full border p-2 rounded-md"
+          />
+        </div>
+        <div className="search-input mb-4">
+          <label htmlFor="forRent">For Rent:</label>
+          <select
+            id="forRent"
+            value={forRent}
+            onChange={(e) => setForRent(e.target.value)}
+            className="w-full border p-2 rounded-md"
+          >
+            <option value="">Any</option>
+            <option value="true">Yes</option>
+            <option value="false">No</option>
+          </select>
+        </div>
+        <div className="search-input mb-4">
+          <label htmlFor="bedrooms">Bedrooms:</label>
+          <select
+            id="bedrooms"
+            value={bedrooms}
+            onChange={(e) => setBedrooms(e.target.value)}
+            className="w-full border p-2 rounded-md"
+          >
+            <option value="">Any</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+          </select>
+        </div>
+        <div className="search-input mb-4">
+          <label htmlFor="propertyType">Property Type:</label>
+          <select
+            id="propertyType"
+            value={propertyType}
+            onChange={(e) => setPropertyType(e.target.value)}
+            className="w-full border p-2 rounded-md"
+          >
+            <option value="">Any</option>
+            <option value="apartment">Apartment</option>
+            <option value="house">House</option>
+          </select>
+        </div>
+        <div className="search-input mb-4">
+          <label htmlFor="amenities">Amenities:</label>
+          <input
+            type="text"
+            id="amenities"
+            placeholder="Enter amenities"
+            value={amenities}
+            onChange={(e) => setAmenities(e.target.value)}
+            className="w-full border p-2 rounded-md"
+          />
+        </div>
       </div>
-    </section>
+      <button
+        type="button"
+        onClick={handleSearch}
+        className="mt-4 bg-blue-500 text-white p-2 rounded-md"
+      >
+        Search
+      </button>
+    </div>
   );
 };
 
-export default Hero;
+export default SearchForm;
