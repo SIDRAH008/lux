@@ -1,92 +1,58 @@
-import React, { useState } from "react";
-import { useFormik } from "formik";
-import * as Yup from "yup";
-import { useNavigate } from "react-router-dom";
+import axios from "axios";
+import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
-const ContactForm = () => {
-  const [submitted, setSubmitted] = useState(false);
-  const navigate = useNavigate();
+export default function Contact({ listing }) {
+  const [landlord, setLandlord] = useState(null);
+  const [message, setMessage] = useState("");
+  const onChange = (e) => {
+    setMessage(e.target.value);
+  };
 
-  const formik = useFormik({
-    initialValues: {
-      name: "",
-      email: "",
-      message: "",
-    },
-    validationSchema: Yup.object({
-      name: Yup.string().required("Required"),
-      email: Yup.string().email("Invalid email address").required("Required"),
-      message: Yup.string().required("Required"),
-    }),
-    onSubmit: (values) => {
-      console.log(values);
-      setSubmitted(true);
-      setTimeout(() => {
-        navigate("/");
-      }, 3000);
-    },
-  });
-
+  useEffect(() => {
+    const fetchLandlord = async () => {
+      try {
+        const res = await axios(
+          ``,
+          {
+            withCredentials: true,
+          }
+        );
+        const data = await res.data;
+        setLandlord(data);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    fetchLandlord();
+  }, );
   return (
-    <div style={{ marginTop: "6%" }}>
-      <h1 className="heading contact-heading">Contact Us</h1>
-      {!submitted ? (
-        <form className="contact-form" onSubmit={formik.handleSubmit}>
-          <input
-            className={`input-form ${
-              formik.touched.name && formik.errors.name ? "error" : ""
-            }`}
-            id="name"
-            name="name"
-            placeholder="Enter your name here"
-            value={formik.values.name}
-            onChange={formik.handleChange}
-          />
-
-          <input
-            className={`input-form ${
-              formik.touched.email && formik.errors.email ? "error" : ""
-            }`}
-            id="email"
-            name="email"
-            placeholder="Enter your email here"
-            type="email"
-            value={formik.values.email}
-            onChange={formik.handleChange}
-          />
-           <input
-            className={`input-form ${
-              formik.touched.name && formik.errors.name ? "error" : ""
-            }`}
-            id="Contact"
-            name="Contact Number"
-            placeholder="Enter your Contact Number "
-            value={formik.values.name}
-            onChange={formik.handleChange}
-          />
-
+    <>
+      {landlord && (
+        <div className="flex flex-col gap-2">
+          <p>
+            Contact <span className="font-semibold">{landlord.username}</span>{" "}
+            for{" "}
+            
+          </p>
           <textarea
-            className={`input-form ${
-              formik.touched.message && formik.errors.message ? "error" : ""
-            }`}
-            id="message"
             name="message"
-            placeholder="Enter your message here"
-            value={formik.values.message}
-            onChange={formik.handleChange}
-          />
-          <button type="submit" className="submit-button">
-            Submit
-          </button>
-        </form>
-      ) : (
-        <div className="thank-you-message">
-          <p>Thank you for your submission!</p>
-          <p>Redirecting to Home page...</p>
+            id="message"
+            rows="2"
+            value={message}
+            onChange={onChange}
+            placeholder="Enter your message here..."
+            className="w-full border p-3 rounded-lg"
+          ></textarea>
+
+          <Link
+            to={``}
+            className="bg-slate-700 text-white text-center p-3 uppercase rounded-lg hover:opacity-95"
+          >
+            Send Message
+          </Link>
         </div>
       )}
-    </div>
+    </>
   );
-};
-
-export default ContactForm;
+}

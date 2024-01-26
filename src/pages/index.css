@@ -44,7 +44,7 @@ section {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #ccc;
+  background:#e0dfdd;
   padding: 0.1rem 0.5%;
   height: 80px;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
@@ -61,23 +61,23 @@ section {
 }
 .navlinks {
   text-decoration: none;
-  color: #666;
+  color: #be9a9a;
   margin: 4px;
   padding: 8px;
   text-transform: uppercase;
   font-weight: 700;
 }
 .navlinks:hover {
-  color: #fac031;
+  color: #dfb44a;
 }
 .navlinks:active {
-  color: #fac031;
+  color: #c2a25c;
 }
 .rightdiv {
   margin-right: 60px;
 }
 .nav-icons {
-  background-color: #fac031;
+  background-color: #ceac5e;
   border-radius: 50%;
   text-decoration: none;
   margin: 4px;
@@ -100,17 +100,17 @@ section {
 }
 .footer-icons {
   background-color: white;
-  border-radius: 50%;
+  border-radius: 30%;
   text-decoration: none;
-  margin: 4px;
+  margin: 5px;
   padding: 10px;
-  color: #fac031;
+  color: #8d7d55;
   font-weight: 100;
   cursor: pointer;
   /* width: 300px; */
 }
 .fit {
-  height: 500px;
+  height: 400px;
   width: 100%;
   background-image: url("https://www.dukan.pk/demo//dtemp/bannerImage1694519463-73422969575848.png");
   background-repeat: no-repeat;
@@ -224,8 +224,21 @@ section {
   border-radius: 0.5rem;
   color: white;
 }
-
-  
+.signup:hover {
+  background: transparent;
+  padding: 0.5rem 2rem;
+  border: 2px solid #fac031;
+  border-radius: 0.5rem;
+  color: grey;
+}
+.logout {
+  background: transparent;
+  padding: 0.5rem 2rem;
+  border: 2px solid #fac031;
+  border-radius: 0.5rem;
+  color: grey;
+  font-size: 17px;
+}
 .logout:hover {
   background: #fac031;
   padding: 0.5rem 2rem;
@@ -323,12 +336,13 @@ ul {
 }
 /* footer here */
 .site-footer {
-  background-color: #fac031;
+  background-image: url(footer.jpg);
+  background-color: #333027;
   color: white;
-  padding: 45px 0 20px;
+  padding: 35px 0 20px;
   font-size: 15px;
-  line-height: 24px;
-  color: black;
+  line-height: 25px;
+  
 }
 .site-footer hr {
   border-top-color: white;
@@ -478,7 +492,80 @@ ul {
   justify-content: space-between;
   padding: 84px;
 }
+.category-container {
+  background-color: transparent;
+  box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.3);
+  padding: 40px;
+}
+.category {
+  background-color: white;
+  font-size: 29px;
+}
+.category-heading {
+  font-size: 18px;
+}
+.cat-container {
+  margin: 20px 30px;
+  overflow-y: hidden;
+}
 
+.cart-page {
+  border: 0.5px solid rgb(208, 208, 208);
+  border-radius: 5px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4px;
+  margin-right: 17px;
+}
+
+/* category styling */
+.Category-container {
+  margin-top: 17%;
+  background-color: rgb(255, 255, 255);
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 240px;
+  text-align: left;
+  padding: 34px;
+}
+.Category-container h2 {
+  font-size: 2.1rem;
+  padding: 12px 0px;
+  color: #666;
+}
+.Category-container .cat-button {
+  display: inline-block;
+  padding: 0.1rem 2rem;
+  width: 150px;
+  border: 0.1rem solid #fac031;
+  color: #fac031;
+  cursor: pointer;
+  font-size: 0.9rem;
+  border-radius: 0.5rem;
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+  margin-top: 1rem;
+}
+.Category-container .cat-button:active {
+  background-color: #fac031;
+  color: black;
+}
+
+.Menu-Searchbar {
+  border: 1px solid rgb(172, 170, 170);
+  padding: 10px;
+  border-radius: 4px;
+  width: 700px;
+  background-color: transparent;
+}
+.Menu-Searchbar:active {
+  background-color: white;
+}
+
+/* property-page.css */
 .property-page {
   font-family: 'Arial', sans-serif;
   background-color: #f4f4f4;
@@ -492,49 +579,102 @@ header {
   padding: 1em;
 }
 
-.hero {
-  background-color: #f5f5f5;
-  padding: 50px 0;
-}
-
-.container {
+.property-details {
   max-width: 800px;
-  margin: 0 auto;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.box {
-  margin-bottom: 20px;
+.property-details h2 {
+  color: #333;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
+  margin-top: 20px;
 }
 
-input,
-select {
-  width: 100%;
-  padding: 10px;
-  margin-top: 5px;
-  margin-bottom: 10px;
-  box-sizing: border-box;
+.property-details ul {
+  list-style-type: none;
+  padding: 0;
 }
 
-label {
-  display: block;
+.property-details li {
   margin-bottom: 5px;
 }
 
-.btn1 {
-  background-color: #4caf50;
-  color: white;
-  padding: 10px 15px;
-  border: none;
+.property-details p {
+  margin-bottom: 20px;
+}
+/* ServicePage.css */
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  margin: 20px 0;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #555;
+}
+/* Chatbot.css */
+.chat-container {
+  max-width: 400px;
+  margin: auto;
+  padding: 50px;
+  border: 2px solid #ccc;
   border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.chat-box {
+  overflow-y: auto;
+  max-height: 400px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.input-container {
+  display: flex;
+}
+
+#user-input {
+  flex-grow: 1;
+  margin-right: 10px;
+}
+
+#send-btn {
   cursor: pointer;
 }
 
-.btn1 i {
-  margin-right: 5px;
+/* index.css */
+.service-container h1 {
+  
+  margin: 100px;
+  padding: 80px;
+  background-image: url('se.jpg');
 }
 
-/* Add additional styling for radio buttons if needed */
-input[type="radio"] {
-  margin-right: 5px;
+
+.service-text {
+  font-size: 16px;
+  line-height: 1.6;
+}
+/* index.css */
+
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 50vh; /* Set height to 100% of the viewport height */
 }
 
+/* Add the rest of your existing styles below this point */
