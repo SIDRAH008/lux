@@ -33,7 +33,7 @@ const Navbar = () => {
           Chatbot
         </NavLink>
        
-        <NavLink to="/listing" className="navlinks">
+        <NavLink to="/createlisting" className="navlinks">
           List Your Property
         </NavLink>
       </div>

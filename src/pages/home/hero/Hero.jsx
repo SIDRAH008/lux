@@ -35,14 +35,20 @@ const SearchForm = ({ onSearch }) => {
        
         <div className="search-input mb-4">
           <label htmlFor="price">Price:</label>
-          <input
+          <select
             type="text"
             id="price"
             placeholder="Enter price"
             value={price}
             onChange={(e) => setPrice(e.target.value)}
             className="w-full border p-2 rounded-md"
-          />
+          >
+             <option value="">Price</option>
+            <option value="city1">50,000</option>
+            <option value="city2">70,000</option>
+            <option value="city2">80,000</option>
+            <option value="city2">90,000</option>
+            </select>
         </div>
         <div className="search-input mb-4">
           <label htmlFor="forRent">For Rent:</label>
@@ -52,7 +58,7 @@ const SearchForm = ({ onSearch }) => {
             onChange={(e) => setForRent(e.target.value)}
             className="w-full border p-2 rounded-md"
           >
-            <option value="">Any</option>
+            <option value="">Rent</option>
             <option value="true">Yes</option>
             <option value="false">No</option>
           </select>
@@ -65,7 +71,7 @@ const SearchForm = ({ onSearch }) => {
             onChange={(e) => setBedrooms(e.target.value)}
             className="w-full border p-2 rounded-md"
           >
-            <option value="">Any</option>
+            <option value="">Bad&Baths</option>
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
@@ -84,17 +90,7 @@ const SearchForm = ({ onSearch }) => {
             <option value="house">House</option>
           </select>
         </div>
-        <div className="search-input mb-4">
-          <label htmlFor="amenities">Amenities:</label>
-          <input
-            type="text"
-            id="amenities"
-            placeholder="Enter amenities"
-            value={amenities}
-            onChange={(e) => setAmenities(e.target.value)}
-            className="w-full border p-2 rounded-md"
-          />
-        </div>
+       
       </div>
       <button
         type="button"
