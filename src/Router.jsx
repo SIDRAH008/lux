@@ -9,7 +9,7 @@ import Footer from "./component/footer";
 import Login from "./pages/login";
 import Listing from "./pages/listing";
 import CreateListing from "./component/createlisting";
-import Mortgage from "./pages/Mortgage";
+import Mortgage from "./pages/mortgage";
 
 const Router = () => {
   return (
