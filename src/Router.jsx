@@ -3,13 +3,13 @@ import Home from "./pages/home/Home";
 import Header from "./pages/header";
 import ServicePage from "./pages/services";
 import Chatbot from "./pages/chatbot";
-import MortgageCalculator from "./pages/mortgage";
 import Contact from "./pages/contact";
 import PropertyList from "./pages/properties";
 import Footer from "./component/footer";
 import Login from "./pages/login";
 import Listing from "./pages/listing";
 import CreateListing from "./component/createlisting";
+
 
 const Router = () => {
   return (
