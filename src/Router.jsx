@@ -9,7 +9,7 @@ import Footer from "./component/footer";
 import Login from "./pages/login";
 import Listing from "./pages/listing";
 import CreateListing from "./component/createlisting";
-
+import Mortgage from "./pages/Mortgage";
 
 const Router = () => {
   return (
@@ -25,7 +25,8 @@ const Router = () => {
           <Route path="/contact" element={<Contact />} />
           <Route path="/login" element={<Login />} />
           <Route path="/createlisting" element={<CreateListing />} />
-          <Route path="/mortgage" element={<MortgageCalculator />} />
+          <Route path="/mortgage" element={<Mortgage />} />
+        
         </Routes>
       </div>
       <Footer />
