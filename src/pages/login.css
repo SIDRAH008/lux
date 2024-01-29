@@ -1,57 +1,53 @@
-/* login.css */
+/* Add the following CSS for responsiveness */
 
-.container {
-    margin-top: 6%;
-  }
-  
-  .form {
-    max-width: 300px;
-    margin: 0 auto;
-  }
-  
-  .form h1 {
-    font-size: 1.5rem;
-    text-align: center;
-    font-weight: bold;
-    margin-bottom: 1rem;
-  }
-  
-  .input {
-    border: 1px solid #ccc;
-    padding: 0.75rem;
-    border-radius: 0.25rem;
-  }
-  
-  .error {
-    color: #ff0000;
-    margin-top: 0.5rem;
-  }
-  
-  .button {
-    background-color: #fac031;
-    color: #fff;
-    padding: 0.75rem;
-    border: none;
-    border-radius: 0.25rem;
-    cursor: pointer;
-    transition: opacity 0.3s;
-  }
-  
-  .button:hover {
-    opacity: 0.95;
-  }
-  
-  .link {
-    display: flex;
-    gap: 0.5rem;
-    margin-top: 1rem;
-  }
-  
-  .link p {
+/* Base styles */
+body {
+    font-family: 'Roboto', sans-serif;
     margin: 0;
+    padding: 0;
   }
   
-  .link a {
-    color: #fac031;
+  /* Container for the form */
+  .min-h-screen {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Form container */
+  .bg-white {
+    width: 100%;
+    max-width: 400px; /* Set a maximum width for the form */
+  }
+  
+  /* Form styling */
+  .input-form {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .submit-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #3bf66a;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  /* Media queries for responsiveness */
+  @media (max-width: 768px) {
+    .bg-white {
+      max-width: 100%; /* Adjust the maximum width for smaller screens */
+    }
+  
+    .input-form,
+    .submit-button {
+      font-size: 14px; /* Adjust font size for smaller screens */
+    }
   }
   

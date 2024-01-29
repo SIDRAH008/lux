@@ -1,20 +1,40 @@
 /* hero.css */
 
 /* General styling */
-.container {
-  max-width: 1200px;
-  margin: 20px;
-  padding: 100px;
+.contain {
+  max-width: 900px;
+  margin: 15px auto; /* Center the container horizontally */
+  padding: 30px 90px;
+  background: transparent;
+  background-color: grey;
 
+}
 
+.main{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: serif;
+}
+
+.Heading {
+  font-size: 2em;
+
+  /* Add any other styles for your heading */
+}
+
+.Preheading {
+  font-size: 1.2em;
+
+  /* Add any other styles for your paragraph */
 }
 
 .grid {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  gap: 16px;
+  gap: 26px;
 }
-
 @media (min-width: 640px) {
   .grid {
     grid-template-columns: repeat(2, 1fr);
@@ -41,39 +61,27 @@ label {
 
 select,
 input[type="text"] {
-  width: 100%;
-  padding: 10px;
+  width: 110%;
+  padding: 15px;
+  margin-bottom: 10px; /* Add some space between the inputs */
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 10px;
 }
 
 /* Styling for fields on one line */
-.flex {
-  display: flex;
-  justify-content: space-between;
-}
-
-.flex .search-input {
-  width: 50%;
-}
-
-/* Additional styling for the button */
-.mt-4 {
+.search {
   margin-top: 16px;
-}
-
-.bg-blue-500 {
-  background-color: #3b82f6;
-}
-
-.text-white {
+  padding: 15px;
+  background-color: #3bf66a;
   color: #fff;
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
 }
 
-.p-2 {
-  padding: 8px;
+.search:hover {
+  background-color: #37c25a;
 }
 
-.rounded-md {
-  border-radius: 4px;
-}

@@ -1,6 +1,7 @@
 // components/SearchForm.js
 import React, { useState } from 'react';
 import "./hero.css";
+import Heading from '../../common/Heading';
 
 const SearchForm = ({ onSearch }) => {
   const [location, setLocation] = useState('');
@@ -14,10 +15,17 @@ const SearchForm = ({ onSearch }) => {
   const handleSearch = () => {
     // Call the onSearch prop with the current search criteria
     onSearch({ location, rent, price, forRent, bedrooms, propertyType, amenities });
-  };
+  }; 
+  
+ 
+  
 
   return (
-    <div className="container mx-auto p-4 lg:w-3/4 xl:w-2/3">
+  
+        <div className='main'>
+<h1 className='heading'> Search Your Next Home</h1>
+<h3 className='preHeading'> Find new & featured property located in your local city.</h3>
+    <div className="contain mx-auto p-4 lg:w-3/4 xl:w-2/3">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         <div className="search-input mb-4">
           <label htmlFor="location">Location:</label>
@@ -92,14 +100,14 @@ const SearchForm = ({ onSearch }) => {
         </div>
        
       </div>
-      <button
+      <button className=" search"
         type="button"
         onClick={handleSearch}
-        className="mt-4 bg-blue-500 text-white p-2 rounded-md"
+        
       >
-        Search
+        Find
       </button>
-    </div>
+    </div></div>
   );
 };
 

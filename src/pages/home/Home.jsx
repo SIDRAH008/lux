@@ -11,9 +11,11 @@ import step2 from "../../component/Images/step-2.jfif";
 //import step3 from "../../component/Images/step-3.jfif";
 //import step4 from "../../component/Images/step-4.jpg";
 //import step1 from "../../component/Images/step1"
+
 const Home = () => {
   return (
     <>
+    
       <Hero />
     
       <section className="speciality" id="speciality">
@@ -101,6 +103,10 @@ const Home = () => {
           <div className="box">
             <img src={step2} alt="" />
             <h3>Best home for You</h3>
+          </div>
+          <div className="box">
+            <img src={step2} alt="" />
+            <h3>LIVE HAPPY</h3>
           </div>
           <div className="box">
             <img src={step2} alt="" />
