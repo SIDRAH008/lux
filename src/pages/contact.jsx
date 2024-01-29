@@ -54,16 +54,17 @@ const ContactForm = () => {
             value={formik.values.email}
             onChange={formik.handleChange}
           />
-           <input
-            className={`input-form ${
-              formik.touched.name && formik.errors.name ? "error" : ""
-            }`}
-            id="Contact"
-            name="Contact Number"
-            placeholder="Enter your Contact Number "
-            value={formik.values.name}
-            onChange={formik.handleChange}
-          />
+          <input
+  className={`input-form ${
+    formik.touched.numbers && formik.errors.numbers ? "error" : ""
+  }`}
+  id="numbers"
+  name="numbers" 
+  placeholder="Enter your Contact Number"
+  value={formik.values.numbers}
+  onChange={formik.handleChange}
+/>
+
 
           <textarea
             className={`input-form ${

@@ -1,4 +1,7 @@
 import { NavLink } from "react-router-dom";
+import { Nav, NavDropdown } from "react-bootstrap";
+import "bootstrap/dist/css/bootstrap.min.css"; // Import Bootstrap CSS
+
 import "./index.css";
 import logo from "./lux.png";
 const Navbar = () => {
@@ -11,9 +14,13 @@ const Navbar = () => {
         <NavLink to="/" className="navlinks">
           Home
         </NavLink>
-        <NavLink to="/properties" className="navlinks">
-        OFF PLAN
+        <NavDropdown title="OFF PLAN" id="basic-nav-dropdown">
+        <NavLink to="/properties" className="dropdown-item">
+          View Properties
         </NavLink>
+        {/* Add more dropdown items as needed */}
+      </NavDropdown>
+
         <NavLink to="/secendory" className="navlinks">
          Secendory
         </NavLink>
@@ -28,6 +35,9 @@ const Navbar = () => {
         </NavLink>
         <NavLink to="/login" className="navlinks">
           Login
+        </NavLink>
+        <NavLink to="/signup" className="navlinks">
+          Sigup
         </NavLink>
         <NavLink to="/chatbot" className="navlinks">
           Chatbot

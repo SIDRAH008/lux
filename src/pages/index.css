@@ -25,7 +25,7 @@
 .leftnav img {
   max-width: 100px; /* Adjust max-width as needed */
   height: auto;
-  padding: 5px;
+  padding: 8px;
   margin: 15px;
 }
 
@@ -36,11 +36,11 @@
   align-items: center;
   font-size: large;
   font-weight: 300;
-  font-family: fantasy;
+  font-family:'Times New Roman', Times, serif;
 }
 
 .navlinks {
-  margin-left: 15px; /* Adjust margin as needed */
+  margin-left: 18px; /* Adjust margin as needed */
   color: #0a0a05c2; /* Adjust text color as needed */
   text-decoration: none;
 }
@@ -63,7 +63,7 @@
 
 /* home */
 .home {
-  background-image: url(bc.jpg);
+  background-image: url('bc.jpg');
   background-size: cover;
   background-position: center;
   display: flex;

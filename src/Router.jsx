@@ -10,6 +10,7 @@ import Login from "./pages/login";
 import Listing from "./pages/listing";
 import CreateListing from "./component/createlisting";
 import Mortgage from "./pages/mortgage";
+import SignUp from "./pages/SignUp";
 
 const Router = () => {
   return (
@@ -23,6 +24,7 @@ const Router = () => {
           <Route path="/properties" element={<PropertyList />} />
           <Route path="/service" element={<ServicePage />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/signup" element={<SignUp/>}/>
           <Route path="/login" element={<Login />} />
           <Route path="/createlisting" element={<CreateListing />} />
           <Route path="/mortgage" element={<Mortgage />} />
