@@ -34,7 +34,7 @@ const Navbar = () => {
         </NavLink>
        
         <NavLink to="/createlisting" className="navlinks">
-          List Your Property
+          Add Your Property
         </NavLink>
       </div>
     </div>
