@@ -1,87 +1,137 @@
-/* hero.css */
-
-/* General styling */
-.contain {
-  max-width: 900px;
-  margin: 15px auto; /* Center the container horizontally */
-  padding: 30px 90px;
-  background: transparent;
+/* Add these styles to your existing CSS file */
+.container {
+    height: calc(100vh - 60px);
+    width: 100%;
+    background-image: url('../../bc.jpg');
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.4);
+    background-blend-mode: darken;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   
-
-}
-
-.main{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-family: serif;
-}
-
-.Heading {
-  font-size: 2em;
-
-  /* Add any other styles for your heading */
-}
-
-.Preheading {
-  font-size: 1.2em;
-
-  /* Add any other styles for your paragraph */
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  gap: 26px;
-}
-@media (min-width: 640px) {
-  .grid {
-    grid-template-columns: repeat(2, 1fr);
+  .wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
   }
-}
-
-@media (min-width: 768px) {
-  .grid {
-    grid-template-columns: repeat(3, 1fr);
+  
+  .wrapper > h2 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 20px;
   }
+  
+  .wrapper > h5 {
+    color: #efefef;
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .options {
+    width: 100%;
+    max-width: 800px;
+    
+    background-color: transparent;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-around; /* Adjust as needed */
+  }
+  
+  .options select {
+    flex-basis: 48%; /* Adjust as needed for two columns with some space in between */
+    margin-bottom: 15px;
+    height: 40px;
+    border: none;
+    outline: none;
+    padding: 0.25rem 0.75rem;
+    background-color: rgb(244, 244, 253);
+    color: #0e0d0d;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  .baths-container{
+    flex-basis: 10%;
+  }
+  
+  .options select:first-child {
+    color: #1a1818;
+  }
+  
+  .dropdown-container {
+    flex-basis: 100%;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .dropdown-trigger {
+    width: 60%; /* Adjust as needed */
+    padding: 10px;
+    border: none;
+    background-color: #dfe1e4;
+    color: #0c0c0c;
+    border-radius: 12px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .dropdown-options {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-around; /* Adjust as needed */
+  }
+  
+  .dropdown-option {
+    flex-basis: 48%; /* Adjust as needed for two columns with some space in between */
+  }
+  
+  .dropdown-option select {
+    width: 100%;
+  }
+  
+  .searchIcon {
+    padding: 10px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: linear-gradient(90deg, rgb(7, 3, 73) 0%, rgb(14, 14, 132) 35%, rgb(32, 97, 219) 100%);
+    fill: #fff;
+    cursor: pointer;
+  }
+  
+  .location select {
+    width: 80%; /* Adjust as needed */
+  }
+  
+  
+.bed {
+  font-size: 10px; /* Adjust the size as needed */
 }
-
-.search-input {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  align-self: center;
-}
-
-label {
-  margin-bottom: 4px;
-  font-weight: bold;
-}
-
-select,
-input[type="text"] {
-  width: 110%;
-  padding: 15px;
-  margin-bottom: 10px; /* Add some space between the inputs */
-  border: 1px solid #ccc;
-  border-radius: 10px;
-}
-
-/* Styling for fields on one line */
-.search {
-  margin-top: 16px;
-  padding: 15px;
-  background-color: #3bf66a;
-  color: #fff;
-  border: none;
-  border-radius: 7px;
-  cursor: pointer;
-  display: flex;
-  flex-direction: column;
-}
-
-.search:hover {
-  background-color: #37c25a;
-}
-
+  /* RESPONSIVE */
+  @media only screen and (max-width: 768px) {
+    .options select,
+    .dropdown-option select,
+    .location select {
+      flex-basis: 100%;
+    }
+  }
+  

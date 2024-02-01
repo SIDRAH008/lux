@@ -28,6 +28,10 @@
   padding: 8px;
   margin: 15px;
 }
+.NavDropdown{
+
+     font-weight: 300;
+}
 
 .navlinksBar {
   
@@ -40,9 +44,10 @@
 }
 
 .navlinks {
-  margin-left: 18px; /* Adjust margin as needed */
+  margin-left: 25px; /* Adjust margin as needed */
   color: #0a0a05c2; /* Adjust text color as needed */
   text-decoration: none;
+  justify-content: space-between;
 }
 
 /* Responsive Styles */
@@ -51,6 +56,7 @@
     flex-direction: column;
     align-items: flex-start;
   }
+ 
 
   .navlinksBar {
     margin-top: 1rem; /* Adjust margin as needed */
@@ -62,47 +68,11 @@
 }
 
 /* home */
-.home {
-  background-image: url('bc.jpg');
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.5rem;
-  align-items: center;
-  padding: 0 70px;
-  flex-direction: column;
-}
 
 
 
-.home .content {
-  flex: 1 1 40rem;
-  padding-top: 6rem;
-  color: #e0dfdd;
-}
 
-@keyframes float {
-  0%,
-  100% {
-    transform: translateY(0rem);
-  }
-  50% {
-    transform: translateY(3rem);
-  }
-}
-.home .content h3 {
-  font-size: 3rem;
-  color: black;
-  text-transform: capitalize;
-  font-weight: bold;
-}
 
-.home .content p {
-  font-size: 1rem;
-  color: #787777;
-  padding: 1rem 0;
-}
 /* Speciality section */
 .speciality {
   background: #f7f7f7;

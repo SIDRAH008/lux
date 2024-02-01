@@ -20,9 +20,9 @@ const Navbar = () => {
         </NavLink>
         {/* Add more dropdown items as needed */}
       </NavDropdown>
-
+      
         <NavLink to="/secendory" className="navlinks">
-         Secendory
+         Secendary
         </NavLink>
         <NavLink to="/service" className="navlinks">
           Services
@@ -31,7 +31,7 @@ const Navbar = () => {
           Contact Us
         </NavLink>
         <NavLink to="/mortgage" className="navlinks">
-          Mortages
+          Mortgages
         </NavLink>
         <NavLink to="/login" className="navlinks">
           Login

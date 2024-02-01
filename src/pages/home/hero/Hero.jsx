@@ -1,114 +1,134 @@
-// components/SearchForm.js
 import React, { useState } from 'react';
-import "./hero.css";
-import Heading from '../../common/Heading';
+import { useNavigate } from 'react-router-dom';
+import { AiOutlineSearch } from 'react-icons/ai';
+//import classes from './hero.module.css';
+import './hero.css';
 
-const SearchForm = ({ onSearch }) => {
-  const [location, setLocation] = useState('');
-  const [rent, setRent] = useState('');
-  const [price, setPrice] = useState('');
-  const [forRent, setForRent] = useState('');
-  const [bedrooms, setBedrooms] = useState('');
-  const [propertyType, setPropertyType] = useState('');
-  const [amenities, setAmenities] = useState('');
+const Hero = () => {
+  const [type, setType] = useState('beach');
+  const [continent, setContinent] = useState('0');
+  const [priceRange, setPriceRange] = useState('0');
+  const navigate = useNavigate();
+  const [selectedBeds, setSelectedBeds] = useState(null);
+  const [selectedBaths, setSelectedBaths] = useState(null);
+  const [isOpen, setIsOpen] = useState(false);
+  const [isInputVisible, setIsInputVisible] = useState(false);
+
+  const handleLabelClick = () => {
+    setIsInputVisible(true);
+  };
+
+  const handleOptionClick = (type, value) => {
+    if (type === 'beds') {
+      setSelectedBeds(value);
+    } else if (type === 'baths') {
+      setSelectedBaths(value);
+    }
+    setIsOpen(false);
+  };
+
+  const handleToggle = () => {
+    setIsOpen(!isOpen);
+  };
 
   const handleSearch = () => {
-    // Call the onSearch prop with the current search criteria
-    onSearch({ location, rent, price, forRent, bedrooms, propertyType, amenities });
-  }; 
-  
- 
-  
+    // Navigating to properties
+    navigate(`/properties?type=${type}&continent=${continent}&priceRange=${priceRange}`);
+  };
 
   return (
-  
-        <div className='main'>
-<h1 className='heading'> Search Your Next Home</h1>
-<h3 className='preHeading'> Find new & featured property located in your local city.</h3>
-    <div className="contain mx-auto p-4 lg:w-3/4 xl:w-2/3">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-        <div className="search-input mb-4">
-          <label htmlFor="location">Location:</label>
-          <select
-            id="location"
-            value={location}
-            onChange={(e) => setLocation(e.target.value)}
-            className="w-full border p-2 rounded-md"
-          >
-            <option value="">Any</option>
-            <option value="city1">City 1</option>
-            <option value="city2">City 2</option>
+    <div className="container">
+      <div className="wrapper">
+        <h2>Let me find your dream place right now</h2>
+        <h5>Search the best selection of luxury real estate</h5>
+        <div className="options">
+          <select className="options-container">
+            <option className="parent-option" value="1">Buy</option>
+            <option className="child-option" value="1">Ready</option>
+            <option className="child-option" value="2">Off-Plan</option>
+            <option className="child-option" value="3">All</option>
+            <option className="parent-option" value="2">Rent</option>
+            <option className="child-option" value="1">Yearly</option>
+            <option className="child-option" value="2">Monthly</option>
+            <option className="child-option" value="3">Weekly</option>
           </select>
+          <select className="location">
+            <option className="parent-option" value="1">city1</option>
+            <option className="child-option" value="1">city2</option>
+            <option className="child-option" value="2">city3</option>
+            <option className="child-option" value="3">city4</option>
+            <option className="parent-option" value="2">city5</option>
+            <option className="child-option" value="1">city6</option>
+            <option className="child-option" value="2">city7</option>
+            <option className="child-option" value="3">city8</option>
+          </select>
+          <br />
+          <select className="options-container">
+            <option className="parent-option" value="1">0-10,000</option>
+            <option className="child-option" value="1">10,000-20,000</option>
+            <option className="child-option" value="2">20,000-40,000</option>
+            <option className="child-option" value="3">40,000-60,000</option>
+            <option className="parent-option" value="2">60,000-80,000</option>
+            
+          </select>
+          <select className="options-container">
+            <option className="parent-option" value="1">Residential</option>
+            <option className="child-option" value="1">Apartments</option>
+            <option className="child-option" value="2">Villas</option>
+            <option className="child-option" value="3">Plots</option>
+            <option className="parent-option" value="2">Commercial</option>
+            <option className="child-option" value="1">Office</option>
+            <option className="child-option" value="2">Shop</option>
+            <option className="child-option" value="3">Warehouse</option>
+          </select>
+          <div className="dropdown-container">
+          <button className="dropdown-trigger" onClick={handleToggle}>
+            {selectedBeds && selectedBaths
+              ? `${selectedBeds} Beds & ${selectedBaths} Baths`
+              : 'Select Beds & Baths'}
+          </button>
+          {isOpen && (
+            <div className="dropdown-options">
+              <div className="dropdown-option">
+                <h4>Beds</h4>
+                <select className="baths-container">
+            <option className="parent-option" value="1">Beds</option>
+            <option className="child-option" value="1">1</option>
+            <option className="child-option" value="1">2</option>
+            <option className="child-option" value="2">3</option>
+            <option className="child-option" value="3">4</option>
+            <option className="child-option" value="2">5</option>
+            <option className="child-option" value="1">6+</option>
+           
+          </select>
+                             </div>
+              <div className="dropdown-option">
+                <h4>Baths</h4>
+                <select className="bath-container">
+                <option className="parent-option" value="1">Baths</option>
+                <option className="child-option" value="1">1</option>
+            <option className="child-option" value="1">2</option>
+            <option className="child-option" value="2">3</option>
+            <option className="child-option" value="3">4</option>
+            <option className="child-option" value="2">5</option>
+            <option className="child-option" value="1">6+</option>
+          </select>
+
+              </div>
+
+            </div>
+          )}
+         
         </div>
+      
        
-        <div className="search-input mb-4">
-          <label htmlFor="price">Price:</label>
-          <select
-            type="text"
-            id="price"
-            placeholder="Enter price"
-            value={price}
-            onChange={(e) => setPrice(e.target.value)}
-            className="w-full border p-2 rounded-md"
-          >
-             <option value="">Price</option>
-            <option value="city1">50,000</option>
-            <option value="city2">70,000</option>
-            <option value="city2">80,000</option>
-            <option value="city2">90,000</option>
-            </select>
-        </div>
-        <div className="search-input mb-4">
-          <label htmlFor="forRent">For Rent:</label>
-          <select
-            id="forRent"
-            value={forRent}
-            onChange={(e) => setForRent(e.target.value)}
-            className="w-full border p-2 rounded-md"
-          >
-            <option value="">Rent</option>
-            <option value="true">Yes</option>
-            <option value="false">No</option>
-          </select>
-        </div>
-        <div className="search-input mb-4">
-          <label htmlFor="bedrooms">Bedrooms:</label>
-          <select
-            id="bedrooms"
-            value={bedrooms}
-            onChange={(e) => setBedrooms(e.target.value)}
-            className="w-full border p-2 rounded-md"
-          >
-            <option value="">Bad&Baths</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-          </select>
-        </div>
-        <div className="search-input mb-4">
-          <label htmlFor="propertyType">Property Type:</label>
-          <select
-            id="propertyType"
-            value={propertyType}
-            onChange={(e) => setPropertyType(e.target.value)}
-            className="w-full border p-2 rounded-md"
-          >
-            <option value="">Any</option>
-            <option value="apartment">Apartment</option>
-            <option value="house">House</option>
-          </select>
-        </div>
-       
-      </div>
-      <button className=" search"
-        type="button"
-        onClick={handleSearch}
         
-      >
-        Find
-      </button>
-    </div></div>
+
+
+        <AiOutlineSearch className="searchIcon" onClick={handleSearch} />
+      </div>
+    </div> </div>
   );
 };
 
-export default SearchForm;
+export default Hero;
