@@ -14,6 +14,13 @@ const Hero = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isInputVisible, setIsInputVisible] = useState(false);
 
+  const [selectedType, setSelectedType] = useState(null);
+
+  const handleTypeChange = (event) => {
+    const selectedValue = event.target.value;
+    setSelectedType(selectedValue);
+  };
+
   const handleLabelClick = () => {
     setIsInputVisible(true);
   };
@@ -36,22 +43,40 @@ const Hero = () => {
     navigate(`/properties?type=${type}&continent=${continent}&priceRange=${priceRange}`);
   };
 
+  const renderBuyOptions = () => {
+    return (
+      <>
+        <option className="parent-option" value="ready">Ready</option>
+        <option className="child-option" value="off-plan">Off-Plan</option>
+        <option className="child-option" value="all">All</option>
+      </>
+    );
+  };
+  const renderRentOptions = () => {
+    return (
+      <>
+        <option className="child-option" value="yearly">Yearly</option>
+        <option className="child-option" value="monthly">Monthly</option>
+        <option className="child-option" value="weekly">Weekly</option>
+      </>
+    );
+  };
+
   return (
     <div className="container">
       <div className="wrapper">
         <h2>Let me find your dream place right now</h2>
         <h5>Search the best selection of luxury real estate</h5>
         <div className="options">
-          <select className="options-container">
-            <option className="parent-option" value="1">Buy</option>
-            <option className="child-option" value="1">Ready</option>
-            <option className="child-option" value="2">Off-Plan</option>
-            <option className="child-option" value="3">All</option>
-            <option className="parent-option" value="2">Rent</option>
-            <option className="child-option" value="1">Yearly</option>
-            <option className="child-option" value="2">Monthly</option>
-            <option className="child-option" value="3">Weekly</option>
-          </select>
+  
+        <select className="options-container" onChange={handleTypeChange}>
+          <option className="parent-option" value="0" disabled>Select type</option>
+          <option className="parent-option" value="buy">Buy</option>
+          {selectedType === 'buy' && renderBuyOptions()}
+          <option className="parent-option" value="rent">Rent</option>
+          {selectedType === 'rent' && renderRentOptions()}
+        </select>
+      
           <select className="location">
             <option className="parent-option" value="1">city1</option>
             <option className="child-option" value="1">city2</option>
@@ -68,8 +93,10 @@ const Hero = () => {
             <option className="child-option" value="1">10,000-20,000</option>
             <option className="child-option" value="2">20,000-40,000</option>
             <option className="child-option" value="3">40,000-60,000</option>
-            <option className="parent-option" value="2">60,000-80,000</option>
-            
+            <option className="parent-option" value="2">60,000-0,000</option>
+            <option className="child-option" value="1">Office</option>
+            <option className="child-option" value="2">Shop</option>
+            <option className="child-option" value="3">Warehouse</option>
           </select>
           <select className="options-container">
             <option className="parent-option" value="1">Residential</option>
