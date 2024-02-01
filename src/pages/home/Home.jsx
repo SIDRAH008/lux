@@ -20,7 +20,7 @@ const Home = () => {
     
       <section className="speciality" id="speciality">
         <h1 className="heading">
-          Our <span>speciality</span>
+          New  <span> Development</span>
         </h1>
         <div className="box-container">
           <div className="box">
