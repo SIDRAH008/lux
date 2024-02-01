@@ -70,7 +70,9 @@
 /* home */
 
 
-
+.home{
+  background-image: url('./bc.jpg');
+}
 
 
 /* Speciality section */

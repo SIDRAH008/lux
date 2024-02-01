@@ -1,10 +1,10 @@
 /* Add these styles to your existing CSS file */
-.container {
+.containers {
     height: calc(100vh - 60px);
     width: 100%;
-    background-image: url('../../bc.jpg');
+background-image: url('../../bc.jpg');
     background-size: cover;
-    background-color: rgba(0, 0, 0, 0.4);
+    
     background-blend-mode: darken;
     display: flex;
     justify-content: center;

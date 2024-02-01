@@ -63,7 +63,7 @@ const Hero = () => {
   };
 
   return (
-    <div className="container">
+    <div className="containers">
       <div className="wrapper">
         <h2>Let me find your dream place right now</h2>
         <h5>Search the best selection of luxury real estate</h5>
