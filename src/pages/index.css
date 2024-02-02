@@ -15,10 +15,10 @@
 /* header .css*/
 
 
+/* Common styles for header and navbar */
 .Header {
   display: flex;
-
-  align-items: right;
+  align-items: center; /* Center vertically */
   padding: 10px;
   background-color: #f8f0f0;
   color: #181717;
@@ -47,43 +47,20 @@
   color: #fac031;
 }
 
-/* Add more specific styling for dropdown if needed */
-.navbar-dropdown {
-  background-color: #333;
-  color: #fff;
+/* Responsive styles using media queries */
+@media screen and (max-width: 768px) {
+  .navlinksBar {
+    flex-direction: column; /* Change to a column layout on smaller screens */
+  }
+
+  .navlinks {
+    padding: 10px 0; /* Adjust padding for better spacing in the column layout */
+  }
+
+  /* Add more specific styles for mobile if needed */
 }
 
-/* Navbar.css */
-
-/* ... (previous styles) */
-
-/* Styles for NavDropdown */
-.navlinksBar .nav-item.dropdown:hover .nav-link {
-  color: #fff; /* Text color when hovering over the dropdown */
-}
-
-.navlinksBar .nav-item.dropdown:hover .dropdown-menu {
-  display: block;
-}
-
-.navlinksBar .nav-item.dropdown .dropdown-menu {
-   /* Background color of the dropdown */
-  border: none;
-  box-shadow: none;
-}
-
-.navlinksBar .nav-item.dropdown .dropdown-item {
-  color: white;
-  font-family: 'YourFont', sans-serif; /* Set your desired font family */
-  font-size: 16px;
-  padding: 10px;
-}
-
-/* ... (continue with other styles as needed) */
-
-
-/* home */
-
+/* Add more styles as needed */
 
 
 
