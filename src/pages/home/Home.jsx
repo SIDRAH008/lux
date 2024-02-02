@@ -12,12 +12,11 @@ import step2 from "../../component/Images/step-2.jfif";
 //import step4 from "../../component/Images/step-4.jpg";
 //import step1 from "../../component/Images/step1"
 
+
 const Home = () => {
   return (
     <>
-    
       <Hero />
-    
       <section className="speciality" id="speciality">
         <h1 className="heading">
           New  <span> Development</span>
@@ -37,8 +36,6 @@ const Home = () => {
             </div>
           </div>
           <div className="box">
-           
-
             <div className="content">
               <img src="step-1.jpg" alt="" />
               <h3> For Rent</h3>

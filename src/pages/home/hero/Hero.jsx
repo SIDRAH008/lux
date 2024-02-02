@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { AiOutlineSearch } from 'react-icons/ai';
+import Multiselect from 'multiselect-react-dropdown';
 //import classes from './hero.module.css';
 import './hero.css';
 
@@ -13,8 +14,25 @@ const Hero = () => {
   const [selectedBaths, setSelectedBaths] = useState(null);
   const [isOpen, setIsOpen] = useState(false);
   const [isInputVisible, setIsInputVisible] = useState(false);
-
   const [selectedType, setSelectedType] = useState(null);
+  
+  const options = [
+    { id: 1, name: 'Option 1' },
+    { id: 2, name: 'Option 2' },
+    { id: 3, name: 'Option 3' },
+    { id: 4, name: 'Option 4' },
+  ];
+
+  const [selectedOptions, setSelectedOptions] = useState([]);
+
+  const onSelect = (selectedList, selectedItem) => {
+    setSelectedOptions(selectedList);
+  };
+
+  const onRemove = (selectedList, removedItem) => {
+    setSelectedOptions(selectedList);
+  };
+
 
   const handleTypeChange = (event) => {
     const selectedValue = event.target.value;
@@ -94,9 +112,7 @@ const Hero = () => {
             <option className="child-option" value="2">20,000-40,000</option>
             <option className="child-option" value="3">40,000-60,000</option>
             <option className="parent-option" value="2">60,000-0,000</option>
-            <option className="child-option" value="1">Office</option>
-            <option className="child-option" value="2">Shop</option>
-            <option className="child-option" value="3">Warehouse</option>
+         
           </select>
           <select className="options-container">
             <option className="parent-option" value="1">Residential</option>
@@ -129,19 +145,32 @@ const Hero = () => {
            
           </select>
                              </div>
-              <div className="dropdown-option">
-                <h4>Baths</h4>
-                <select className="bath-container">
-                <option className="parent-option" value="1">Baths</option>
-                <option className="child-option" value="1">1</option>
-            <option className="child-option" value="1">2</option>
-            <option className="child-option" value="2">3</option>
-            <option className="child-option" value="3">4</option>
-            <option className="child-option" value="2">5</option>
-            <option className="child-option" value="1">6+</option>
-          </select>
+                          
 
-              </div>
+<div className="dropdown-option">
+  <h4>Baths</h4>
+  <select className="bath-container">
+    <option className="parent-option" value="1">Baths</option>
+    <svg
+    viewBox="0 0 100 100" // Add your desired viewBox dimensions here
+    className="custom-svg"
+  >
+    {/* Your SVG content for Baths */}
+    <circle cx="50" cy="50" r="40" />
+    {/* Add more SVG elements as needed */}
+  
+    <option className="child-option" value="1">1</option>
+    <option className="child-option" value="1">2</option>
+    <option className="child-option" value="2">3</option>
+    <option className="child-option" value="3">4</option>
+    <option className="child-option" value="2">5</option>
+    <option className="child-option" value="1">6+</option></svg>
+  </select>
+
+</div>
+
+
+
 
             </div>
           )}

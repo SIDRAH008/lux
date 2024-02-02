@@ -2,7 +2,7 @@
 .containers {
     height: calc(100vh - 60px);
     width: 100%;
-background-image: url('../../g.jpg');
+background-image: url('../../bgg.jpg');
     background-size: cover;
     
     background-blend-mode: darken;

@@ -14,12 +14,12 @@ const Navbar = () => {
         <NavLink to="/" className="navlinks">
           Home
         </NavLink>
-        <NavDropdown title="OFF PLAN" id="basic-nav-dropdown">
-        <NavLink to="/properties" className="dropdown-item">
-          View Properties
+        
+        <NavLink to="/properties" className="navlinks">
+          OFF Plan
         </NavLink>
         {/* Add more dropdown items as needed */}
-      </NavDropdown>
+     
       
         <NavLink to="/secendory" className="navlinks">
          Secendary
