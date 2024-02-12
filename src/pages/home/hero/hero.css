@@ -127,8 +127,8 @@ button {
   border-radius: 3px;
 }
 .btn-secendory {
-  background-color:chartreuse; /* Replace 'yourColor' with your desired color */
-  color: #fff; /* Set text color to contrast with the background color */
+  background-color:rgb(124, 172, 76); /* Replace 'yourColor' with your desired color */
+  color: #912121; /* Set text color to contrast with the background color */
   padding: 10px 20px; /* Adjust padding to set the button size */
   border: none;
   border-radius: 5px;
