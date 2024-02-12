@@ -1,135 +1,128 @@
-/* Add these styles to your existing CSS file */
-.containers {
-    height: calc(100vh - 60px);
-    width: 100%;
-background-image: url('../../bgg.jpg');
-    background-size: cover;
-    
-    background-blend-mode: darken;
-    display: flex;
-    justify-content:left;
-    align-items: center;
-  }
-  
-  .wrapper {
-    max-width: 1000px;
-    margin: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: left;
-    justify-content: left;
-    padding: 15px;
-  }
-  
-  .wrapper > h2 {
-    font-size: 36px;
-    font-weight: bold;
-    color: #0e0d0d;
-    text-align: left;
-    margin-bottom: 20px;
-  }
-  
-  .wrapper > h5 {
-    color: #0f0f0f;
-    font-size: 18px;
-    text-align: left;
-    margin-bottom: 20px;
-  }
-  
-  .options {
-    width: 100%;
-    max-width: 800px;
-    padding: 10px;
-    border-radius: 10px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    justify-content: space-around; /* Adjust as needed */
-  }
-  
-  .options select {
-    width: 35%; /* Adjust as needed for two columns with some space in between */
-    margin-bottom: 12px;
-    height: 40px;
-    border: none;
-    outline: none;
-    
-    background-color: rgb(187, 187, 207);
-    color: #0e0d0d;
-    border-radius: 10px;
-    font-size: 16px;
-    cursor: pointer;
-  }
-  .baths-container{
-    flex-basis: 5%;
-  }
-  
-  .options select:first-child {
-    color: #1a1818;
-  }
-  
-  .dropdown-container {
-    flex-basis: 100%;
-    margin-bottom: 15px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .dropdown-trigger {
-    width: 60%; /* Adjust as needed */
-    padding: 10px;
-    border: none;
-    background-color:  rgb(187, 187, 207);
-    color: #0c0c0c;
-    border-radius: 12px;
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .dropdown-options {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    justify-content: space-around; /* Adjust as needed */
-  }
-  
-  .dropdown-option {
-    flex-basis: 48%; /* Adjust as needed for two columns with some space in between */
-  }
-  
-  .dropdown-option select {
-    width: 100%;
-  }
-  
-  .searchIcon {
-    padding: 10px;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background: linear-gradient(90deg, rgb(7, 3, 73) 0%, rgb(14, 14, 132) 35%, rgb(32, 97, 219) 100%);
-    fill: #fff;
-    cursor: pointer;
-  }
-  
-  .location select {
-    width: 80%; /* Adjust as needed */
-  }
-  
-  
-.bed {
-  font-size: 10px; /* Adjust the size as needed */
+/* hero.css */
+/* hero.css */
+
+.search-filter {
+  background-image: url('bgg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover; /* or 'contain' depending on your preference */
+  height: 100vh;
+  display: flex;
+  padding: 20px;
+   /* Center horizontally */
+  align-items: center; /* Center vertically */
 }
-  /* RESPONSIVE */
-  @media only screen and (max-width: 768px) {
-    .options select,
-    .dropdown-option select,
-    .location select {
-      flex-basis: 100%;
-    }
-  }
-  
+
+.filter-container {
+  background-color: rgb(152, 158, 156);
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  padding: 10px; /* Add padding for spacing */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.filter-options {
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+.column {
+  flex: 1;
+  margin-right: 15px;
+}
+
+/* Adjust the styling of other elements as needed */
+.select-field,
+.location-field,
+.price-field,
+.area-field {
+  margin-bottom: 15px;
+}
+
+/* Add styles for the label and input/button elements */
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.location-field input {
+  padding: 8px 50px;
+}
+
+button {
+  cursor: pointer;
+  padding: 8px 60px;
+}
+
+.price-range,
+.area-range {
+  display: flex;
+  margin-top: 5px;
+}
+
+.price-range input,
+.area-range input {
+  flex: 1;
+  margin-right: 5px;
+}
+
+/* Styles for area field and container */
+.area-field {
+  position: relative;
+  display: inline-block;
+}
+
+.area-field button {
+  cursor: pointer;
+}
+
+.area-container {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  z-index: 1;
+}
+
+.area-container input {
+  margin-bottom: 5px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+/* Styles for price field and container */
+.price-field {
+  position: relative;
+  display: inline-block;
+}
+
+.price-field button {
+  cursor: pointer;
+}
+
+.price-range {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  z-index: 1;
+}
+
+.price-range input {
+  margin-bottom: 5px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}

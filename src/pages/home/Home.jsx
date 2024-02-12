@@ -8,9 +8,9 @@ import Hero from "./hero/Hero"
 //import Team from "./team/Team"
 //import Footer from "../../component/footer"
 import step2 from "../../component/Images/step-2.jfif";
-//import step3 from "../../component/Images/step-3.jfif";
+import step3 from "../../component/Images/step-3.jfif";
 //import step4 from "../../component/Images/step-4.jpg";
-//import step1 from "../../component/Images/step1"
+//import pic from "../../component/Images/1.webp";
 
 
 const Home = () => {
@@ -25,7 +25,7 @@ const Home = () => {
           <div className="box">
             <img
               className="image"
-              src="step-1"
+              src="pic"
               alt=""
             />
             <div className="content">
@@ -94,7 +94,7 @@ const Home = () => {
       <div className="w-full flex justify-center">
         <section className="steps">
           <div className="box">
-            <img src={step2} alt="" />
+            <img src={step3} alt="" />
             <h3>choose your favorite palce</h3>
           </div>
           <div className="box">
@@ -106,7 +106,7 @@ const Home = () => {
             <h3>LIVE HAPPY</h3>
           </div>
           <div className="box">
-            <img src={step2} alt="" />
+            <img src={step3} alt="" />
             <h3>LIVE HAPPY</h3>
           </div>
         </section>

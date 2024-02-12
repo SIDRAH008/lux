@@ -21,7 +21,7 @@ const Navbar = () => {
 
       {/* Mobile menu icon */}
       <div className="mobile-menu-icon" onClick={handleMobileMenuToggle}>
-        <div className={`bar ${showMobileMenu ? "open" : ""}`}></div>
+        <div className={`bar ${showMobileMenu ? "open" : " "}`}></div>
         <div className={`bar ${showMobileMenu ? "open" : ""}`}></div>
         <div className={`bar ${showMobileMenu ? "open" : ""}`}></div>
       </div>
@@ -35,7 +35,7 @@ const Navbar = () => {
         </NavLink>
         {/* Add more dropdown items as needed */}
         <NavLink to="/secendory" className="navlinks">
-          Secendary
+        secondary
         </NavLink>
         <NavLink to="/service" className="navlinks">
           Services
@@ -55,8 +55,9 @@ const Navbar = () => {
         <NavLink to="/chatbot" className="navlinks">
           Chatbot
         </NavLink>
-        <NavLink to="/createlisting" className="navlinks">
-          Add Your Property
+       
+        <NavLink to="/admin" className="navlinks">
+          Profolio
         </NavLink>
       </div>
     </div>

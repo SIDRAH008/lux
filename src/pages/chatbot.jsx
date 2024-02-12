@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./index.css"; // Import your CSS file for styling
+import logo from "./lux.png";
 
 const Chatbot = () => {
   const [messages, setMessages] = useState([]);
@@ -17,7 +18,7 @@ const Chatbot = () => {
     } else if (message.toLowerCase().includes("bye")) {
       response = "Goodbye! Have a great day.";
     } else {
-      response = "I'm sorry, I didn't understand that. Can you please rephrase?";
+      response = "Unfortunately, we couldn't find the information you're looking for. Please contact us via email at info@luxealty.com or call +00000000000 for further assistance or request a callback.";
     }
 
     setTimeout(() => addMessage('Chatbot', response), 1000);
@@ -39,6 +40,11 @@ const Chatbot = () => {
 
   return (
     <div className="chat-container">
+      <div className="left">
+        <img src={logo} alt="" />
+   
+       <h2 class="chat-heading">LuxRealty Assist  </h2>    </div>
+
       <div id="chat-box" className="chat-box">
         {messages.map((msg, index) => (
           <div key={index}>

@@ -1,7 +1,9 @@
 const propertycard =()=>{
     return (
         <>
-        
+         
+         
+
         </>
     );
 };
