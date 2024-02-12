@@ -9,7 +9,7 @@ import Footer from "./component/footer";
 import Login from "./pages/login";
 import Listing from "./pages/listing";
 import CreateListing from "./component/createlisting";
-import Mortgage from "./pages/Mortgage";
+//import Mortgage from "./pages/Mortgage";
 import SignUp from "./pages/SignUp";
 //import Sidebar from "./pages/adminpanel/sidebar";
 import Adminpanel from "./pages/adminpanel/pages/home/Home";
@@ -28,7 +28,7 @@ const Router = () => {
           <Route path="/signup" element={<SignUp/>}/>
           <Route path="/login" element={<Login />} />
           <Route path="/createlisting" element={<CreateListing />} />
-          <Route path="/mortgage" element={<Mortgage />} />
+         
           <Route path="/admin" element={<Adminpanel/>}/>
         
         </Routes>
