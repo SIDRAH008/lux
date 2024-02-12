@@ -2,18 +2,18 @@
 /* hero.css */
 
 .search-filter {
-  background-image: url('bgg.jpg');
+  background-image: url('log.jpg');
   background-repeat: no-repeat;
   background-size: cover; /* or 'contain' depending on your preference */
   height: 100vh;
   display: flex;
-  padding: 20px;
+  padding: 5px;
    /* Center horizontally */
   align-items: center; /* Center vertically */
 }
 
 .filter-container {
-  background-color: rgb(208, 212, 211);
+  background-color: rgb(206, 201, 201);
   display: flex;
   flex-direction: column;
   max-width: 600px;
