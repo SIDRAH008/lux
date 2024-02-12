@@ -181,7 +181,7 @@ const SearchFilter = () => {
             </div>
           </div>
           <div className="row">
-            <button type="button" className="btn btn-dark green" onClick={handleButtonClick}>
+            <button type="button" className="btn btn-dark" onClick={handleButtonClick}>
               Search
             </button>
           

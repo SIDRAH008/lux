@@ -13,7 +13,7 @@
 }
 
 .filter-container {
-  background-color: rgb(152, 158, 156);
+  background-color: rgb(208, 212, 211);
   display: flex;
   flex-direction: column;
   max-width: 600px;
@@ -125,4 +125,16 @@ button {
   padding: 5px;
   border: 1px solid #ccc;
   border-radius: 3px;
+}
+.btn-secendory {
+  background-color:chartreuse; /* Replace 'yourColor' with your desired color */
+  color: #fff; /* Set text color to contrast with the background color */
+  padding: 10px 20px; /* Adjust padding to set the button size */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-secendory:hover {
+  background-color:burlywood; /* Replace 'yourHoverColor' with the desired hover color */
 }
