@@ -2,7 +2,7 @@
 /* hero.css */
 
 .search-filter {
-  background-image: url('log.jpg');
+  background-image: url('lst.jpg');
   background-repeat: no-repeat;
   background-size: cover; /* or 'contain' depending on your preference */
   height: 100vh;
@@ -11,9 +11,14 @@
    /* Center horizontally */
   align-items: center; /* Center vertically */
 }
+.background{
+  background-color: rgb(12, 12, 12);
+  opacity: 0.8;
+
+}
 
 .filter-container {
-  background-color: rgb(206, 201, 201);
+  
   display: flex;
   flex-direction: column;
   max-width: 600px;
@@ -46,6 +51,7 @@ label {
   display: block;
   font-weight: bold;
   margin-bottom: 5px;
+  color: #fff;
 }
 
 .location-field input {
@@ -126,15 +132,17 @@ button {
   border: 1px solid #ccc;
   border-radius: 3px;
 }
-.btn-secendory {
-  background-color:rgb(124, 172, 76); /* Replace 'yourColor' with your desired color */
-  color: #912121; /* Set text color to contrast with the background color */
-  padding: 10px 20px; /* Adjust padding to set the button size */
+.button {
+  background-color: #d5dbd5;
+  color: white;
+  padding: 10px ;
   border: none;
-  border-radius: 5px;
+  border-radius: 2px;
   cursor: pointer;
+  font-size: 16px;
+  margin: 2px;
 }
 
-.btn-secendory:hover {
-  background-color:burlywood; /* Replace 'yourHoverColor' with the desired hover color */
+.button:hover {
+  background-color: #f1fcf1;
 }

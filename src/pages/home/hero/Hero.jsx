@@ -107,6 +107,7 @@ const SearchFilter = () => {
 
   return (
     <div className="search-filter">
+      <div className='background'>
       <div className="filter-container">
         <div className="filter-options">
           <div className="row">
@@ -180,11 +181,13 @@ const SearchFilter = () => {
               </div>
             </div>
           </div>
-          <div className="row">
-            <button type="button" className="btn btn-dark" onClick={handleButtonClick}>
+         
+            <div  className="button" >
+            <button type="button" className="btn " onClick={handleButtonClick}>
               Search
             </button>
           
+            </div>
           </div>
         </div>
       </div>
