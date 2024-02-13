@@ -12,39 +12,85 @@
   padding: 0px;
 }
 /* header .css*/
-
-
-/* Common styles for header and navbar */
+/* Add these styles to your CSS file (index.css or another custom CSS file) */
 .Header {
   display: flex;
-  align-items: center; /* Center vertically */
-  padding: 10px;
-  background-color: #f8f0f0;
-  color: #181717;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding: 10px; /* Adjust padding as needed */
+  background-color: #0f0f0f;
+  color: #ccc;
+  position: fixed; /* Set position to fixed */
+  top: 0; /* Fixed position from the top */
+  left: 0; /* Fixed position from the left */
+  right: 0; /* Fixed position from the right */
+  z-index: 1000; /* Set a high z-index to ensure it appears above other elements */
 }
 
+
 .leftnav img {
-  width: 50px;
-  height: auto;
+  max-height: 45px;
+  padding-left: 5px;
+  padding-right: 5px;
+   /* Set the max height for the logo as needed */
+}
+
+.mobile-menu-icon {
+  display: none; /* Hide the mobile menu icon by default */
+}
+
+/* Media query for small screens (adjust the breakpoint as needed) */
+@media (max-width: 768px) {
+  .Header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .leftnav {
+    margin-bottom: 20px; /* Add margin to separate the logo from links on small screens */
+  }
+
+  .navlinksBar {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 60px; /* Adjust the top position to avoid overlapping with the logo */
+    left: 0;
+     /* Set background color as needed */
+    z-index: 1;
+    transition: transform 0.3s ease-in-out;
+    transform: translateY(-100%);
+  }
+
+  .navlinksBar.show {
+    transform: translateY(0);
+  }
+
+  .mobile-menu-icon {
+    display: block;
+    cursor: pointer;
+  }
 }
 
 .navlinksBar {
   display: flex;
-  gap: 20px;
+  justify-content: flex-end;
+  align-items: center;
 }
 
 .navlinks {
+  margin-right: 20px; /* Adjust the spacing between links */
   text-decoration: none;
-  color: #0f0f0f;
-  font-weight: bold;
-  padding: 10px;
-  border-radius: 5px;
-  transition: background-color 0.3s;
+  color: #f6f6f7; /* Set link color as needed */
 }
 
-.navlinks:hover {
-  color: #fac031;
+.login-image {
+  max-height: 30px; /* Set the max height for the login image as needed */
 }
+
+/* Add more styles for other elements as needed */
 
 /* Responsive styles using media queries */
 @media screen and (max-width: 768px) {
@@ -100,6 +146,14 @@
 }
 
 
+/* hero.css */
+
+.outer-heading {
+  text-align: center;
+  font-size: 24px;
+  color: #fff;
+  margin-bottom: 20px;
+}
 
 
 /* Speciality section */
@@ -400,7 +454,7 @@ body {
   height: auto;
 }
 
-
+s
 .chat-box {
   height: 300px;
   overflow-y: auto;

@@ -18,7 +18,7 @@ const bathsOptions = [
   { value: '3', label: '3' },
   { value: '4', label: '4' },
   { value: '5', label: '5' },
-  { value: '6+', label: '6+' },
+  { value: '6+',label:'6+'},
 ];
 
 const options = [
@@ -106,9 +106,13 @@ const SearchFilter = () => {
   };
 
   return (
+ 
     <div className="search-filter">
+      
       <div className='background'>
+        
       <div className="filter-container">
+    
         <div className="filter-options">
           <div className="row">
             <div className="column">
@@ -186,12 +190,12 @@ const SearchFilter = () => {
             <button type="button" className="btn " onClick={handleButtonClick}>
               Search
             </button>
-          
+            </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    
   );
 };
 

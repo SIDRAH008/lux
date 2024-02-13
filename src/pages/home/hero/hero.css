@@ -1,41 +1,40 @@
 /* hero.css */
-/* hero.css */
+
+/* Styling for the entire search filter container */
 
 .search-filter {
-  background-image: url('lst.jpg');
+  background-image: url('img.jpg');
   background-repeat: no-repeat;
-  background-size: cover; /* or 'contain' depending on your preference */
+  background-size: cover;
   height: 100vh;
   display: flex;
-  padding: 5px;
-   /* Center horizontally */
-  align-items: center; /* Center vertically */
+  padding: 10px;
+  align-items: center;
 }
-.background{
-  background-color: rgb(12, 12, 12);
-  opacity: 0.8;
 
+.background {
+  background-color: rgb(31, 30, 29);
+  opacity: 0.5;
 }
 
 .filter-container {
-  
   display: flex;
   flex-direction: column;
   max-width: 600px;
-  padding: 10px; /* Add padding for spacing */
+  margin: 0 auto; /* Center the container horizontally */
+  padding: 20px; /* Add padding for spacing */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.filter-options {
+/* Styling for the columns within the filter container */
+.row {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 15px;
 }
-
-
 
 .column {
   flex: 1;
-  margin-right: 15px;
 }
 
 /* Adjust the styling of other elements as needed */
@@ -55,12 +54,12 @@ label {
 }
 
 .location-field input {
-  padding: 8px 50px;
+  padding: 8px 10px;
 }
 
 button {
   cursor: pointer;
-  padding: 8px 60px;
+  padding: 8px 17px;
 }
 
 .price-range,
@@ -76,48 +75,22 @@ button {
 }
 
 /* Styles for area field and container */
-.area-field {
-  position: relative;
-  display: inline-block;
-}
-
-.area-field button {
-  cursor: pointer;
-}
-
-.area-container {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: #fff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  padding: 10px;
-  z-index: 1;
-}
-
-.area-container input {
-  margin-bottom: 5px;
-  padding: 5px;
-  border: 1px solid #ccc;
-  border-radius: 3px;
-}
-
-/* Styles for price field and container */
+.area-field,
 .price-field {
-  position: relative;
+
   display: inline-block;
 }
 
+.area-field button,
 .price-field button {
   cursor: pointer;
 }
 
+.area-container,
 .price-range {
   display: flex;
   flex-direction: column;
-  position: absolute;
+  
   top: 100%;
   left: 0;
   background-color: #fff;
@@ -126,23 +99,26 @@ button {
   z-index: 1;
 }
 
+.area-container input,
 .price-range input {
   margin-bottom: 5px;
   padding: 5px;
   border: 1px solid #ccc;
   border-radius: 3px;
 }
+
+/* Styles for the search button */
 .button {
-  background-color: #d5dbd5;
+  background-color: #0f8b0f;
   color: white;
-  padding: 10px ;
+  padding: 10px;
   border: none;
   border-radius: 2px;
   cursor: pointer;
   font-size: 16px;
-  margin: 2px;
+  margin: 10px 0;
 }
 
 .button:hover {
-  background-color: #f1fcf1;
+  background-color: #22eb22;
 }

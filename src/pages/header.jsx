@@ -5,6 +5,7 @@ import "bootstrap/dist/css/bootstrap.min.css"; // Import Bootstrap CSS
 
 import "./index.css";
 import logo from "./lux.png";
+import log from "./login.png"
 
 const Navbar = () => {
   const [showMobileMenu, setShowMobileMenu] = useState(false);
@@ -25,8 +26,10 @@ const Navbar = () => {
         <div className={`bar ${showMobileMenu ? "open" : ""}`}></div>
         <div className={`bar ${showMobileMenu ? "open" : ""}`}></div>
       </div>
+      <div className="rgihthed">
 
       <div className={`navlinksBar ${showMobileMenu ? "show" : ""}`}>
+        
         <NavLink to="/" className="navlinks">
           Home
         </NavLink>
@@ -35,32 +38,23 @@ const Navbar = () => {
         </NavLink>
         {/* Add more dropdown items as needed */}
         <NavLink to="/secendory" className="navlinks">
-        secondary
+        Secondary
         </NavLink>
         <NavLink to="/service" className="navlinks">
           Services
         </NavLink>
-        <NavLink to="/contact" className="navlinks">
-          Contact Us
-        </NavLink>
-        <NavLink to="/mortgage" className="navlinks">
-          Mortgages
+        <NavLink to="/service" className="navlinks">
+          About
         </NavLink>
         <NavLink to="/login" className="navlinks">
-          Login
-        </NavLink>
-        <NavLink to="/signup" className="navlinks">
-          Signup
-        </NavLink>
-        <NavLink to="/chatbot" className="navlinks">
-          Chatbot
-        </NavLink>
+         
+        <img  className="login-image" src={log} alt="" />
+</NavLink>
+
        
-        <NavLink to="/admin" className="navlinks">
-          Profolio
-        </NavLink>
+        
       </div>
-    </div>
+    </div></div>
   );
 };
 
