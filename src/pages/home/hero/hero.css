@@ -76,6 +76,36 @@
   font-size: 14px;
 }
 
+/* Media Query for mobile devices */
+@media (max-width: 768px) {
+  .filter-container {
+    width: 90%; /* Adjust the width as needed */
+  }
+
+  .first-row,
+  .second-row {
+    flex-direction: column;
+  }
+
+  .property-type,
+  .rent-buy,
+  .beds-baths,
+  .price-field,
+  .area-field,
+  .button {
+    flex: none;
+    width: 100%;
+  }
+
+  .property-type select,
+  .rent-buy select,
+  .beds-baths select {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+}
+
+
 .price,
 .area {
   width: 100%;
