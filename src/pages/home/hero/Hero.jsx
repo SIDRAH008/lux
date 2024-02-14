@@ -45,7 +45,7 @@ const SearchFilter = () => {
     
     
     <div className="search-filter">
-     <h1 className="heading">Find Your Dream House</h1>
+     <h1 className="heading">Find Your Dream Home</h1>
 
       <div className="filter-container">
      
