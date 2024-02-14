@@ -17,6 +17,13 @@
   color: #d4d107;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+.para {
+  font-size: 21px;
+  font-weight: bold;
+  color: #141414;
+  margin-bottom: 20px;
+  text-align: center;
+}
 
 .filter-container {
   background-color: #202020;
