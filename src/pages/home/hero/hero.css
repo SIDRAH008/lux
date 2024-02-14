@@ -1,124 +1,435 @@
-/* hero.css */
 
-/* Styling for the entire search filter container */
 
 .search-filter {
-  background-image: url('img.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 100vh;
   display: flex;
-  padding: 10px;
+  height: 100vh;
+  justify-content: center;
   align-items: center;
-}
-
-.background {
-  background-color: rgb(31, 30, 29);
-  opacity: 0.5;
+  background-color: #f2f2f2;
+  padding: 10px;
 }
 
 .filter-container {
   display: flex;
-  flex-direction: column;
-  max-width: 600px;
-  margin: 0 auto; /* Center the container horizontally */
-  padding: 20px; /* Add padding for spacing */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-/* Styling for the columns within the filter container */
-.row {
+.filter-options {
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
-  gap: 15px;
+  justify-content: center;
 }
 
-.column {
-  flex: 1;
-}
-
-/* Adjust the styling of other elements as needed */
-.select-field,
-.location-field,
+.property-type,
+.rent-buy,
+.beds-baths,
+.location,
 .price-field,
 .area-field {
-  margin-bottom: 15px;
+  margin: 10px;
 }
 
-/* Add styles for the label and input/button elements */
-label {
-  display: block;
-  font-weight: bold;
-  margin-bottom: 5px;
-  color: #fff;
+.property-type select,
+.rent-buy select,
+.beds-baths select {
+  width: 200px;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
 }
 
-.location-field input {
-  padding: 8px 10px;
+.location input {
+  width: 200px;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
 }
 
-button {
+.price-field,
+.area-field {
+  position: relative;
+}
+
+.price-field button,
+.area-field button {
+  width: 200px;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #fff;
+  text-align: left;
   cursor: pointer;
-  padding: 8px 17px;
 }
 
 .price-range,
-.area-range {
-  display: flex;
-  margin-top: 5px;
-}
-
-.price-range input,
-.area-range input {
-  flex: 1;
-  margin-right: 5px;
-}
-
-/* Styles for area field and container */
-.area-field,
-.price-field {
-
-  display: inline-block;
-}
-
-.area-field button,
-.price-field button {
-  cursor: pointer;
-}
-
-.area-container,
-.price-range {
-  display: flex;
-  flex-direction: column;
-  
+.area-container {
+  position: absolute;
   top: 100%;
   left: 0;
+  width: 200px;
   background-color: #fff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ddd;
   padding: 10px;
   z-index: 1;
 }
 
-.area-container input,
-.price-range input {
-  margin-bottom: 5px;
+.price-range input,
+.area-container input {
+  width: 100%;
   padding: 5px;
-  border: 1px solid #ccc;
-  border-radius: 3px;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
 }
 
-/* Styles for the search button */
 .button {
-  background-color: #0f8b0f;
-  color: white;
-  padding: 10px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.btn {
+  padding: 10px 20px;
+  font-size: 14px;
+  background-color: #007bff;
+  color: #fff;
   border: none;
-  border-radius: 2px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #0062cc;
+}.search-filter {
+  display: flex;
+  justify-content: center;
+  background-color: #f2f2f2;
+  padding: 10px;
+}
+
+.filter-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.filter-options {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.property-type,
+.rent-buy,
+.beds-baths,
+.location,
+.price-field,
+.area-field {
+  margin: 10px;
+}
+
+.property-type select,
+.rent-buy select,
+.beds-baths select {
+  width: 200px;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.location input {
+  width: 200px;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.price-field,
+.area-field {
+  position: relative;
+}
+
+.price-field button,
+.area-field button {
+  width: 200px;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #fff;
+  text-align: left;
+  cursor: pointer;
+}
+
+.price-range,
+.area-container {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 200px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 10px;
+  z-index: 1;
+}
+
+.price-range input,
+.area-container input {
+  width: 100%;
+  padding: 5px;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.button {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.btn {
+  padding: 10px 20px;
+  font-size: 14px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #0062cc;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.price-field,
+.area-field {
+  position: relative;
+}
+
+.price-range,
+.area-container {
+  display: none;
+  position: absolute;
+  top: 100%; /* Position below the button */
+  left: 0;
+  width: 100%;
+  background-color: #fff; /* Add any background color you want */
+  border: 1px solid #ccc;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Optional box shadow */
+  z-index: 1; /* Ensure it's above other elements */
+}
+
+.price-field.active .price-range,
+.area-field.active .area-container {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 10px;
+}
+
+
+.btn {
+  padding: 10px 20px;
+  background-color: #00ff00; /* Change to your desired background color */
+  color: #fff; /* Change to your desired text color */
+  border: none;
+  border-radius: 5px;
   cursor: pointer;
   font-size: 16px;
-  margin: 10px 0;
+  transition: background-color 0.3s;
 }
 
-.button:hover {
-  background-color: #22eb22;
+.btn:hover {
+  background-color: #0056b3; /* Change to your desired hover color */
+}
+
+/* Add any additional styling as needed */
+
+
+/* propertycss*/
+
+.property-type-filter {
+  position: relative;
+  display: inline-block;
+}
+
+.category-filter {
+  cursor: pointer;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 200px; /* Adjust the width as needed */
+}
+
+.fontCompensation {
+  margin-right: 10px;
+}
+
+.arrow-icon {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 6px 5px 0;
+  border-color: #000 transparent transparent transparent;
+}
+
+.arrow-icon.up {
+  transform: rotate(-180deg);
+}
+
+.options-container {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  z-index: 1;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+.category-buttons {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.category-button {
+  padding: 8px 12px;
+  margin: 4px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.category-button.active {
+  background-color: #e7e9eb;
+  color: #131212;
+  text-decoration: underline; /* Add underline */
+}
+
+.category-options {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+  gap: 8px;
+  justify-content: space-around;
+}
+
+.category-option {
+  padding: 8px 12px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.category-option.active {
+  background-color: #edf1f5;
+  color: #0f0f0f;
+  text-decoration: underline; /* Add underline */
+}
+
+.arrow-icon.right {
+  transform: rotate(-90deg);
+  margin-left: 5px;
+}
+/* hero.css */
+
+.bed-bath-filter {
+  position: relative;
+  display: inline-block;
+}
+
+.category-filter {
+  cursor: pointer;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 200px; /* Adjust the width as needed */
+}
+
+.fontCompensation {
+  margin-right: 10px;
+}
+
+.arrow-icon {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 6px 5px 0;
+  border-color: #000 transparent transparent transparent;
+}
+
+.arrow-icon.up {
+  transform: rotate(-180deg);
+}
+
+.options-container {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  z-index: 1;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+.bed-options,
+.bath-options {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+  gap: 8px;
+}
+
+.bed-option,
+.bath-option {
+  padding: 8px 12px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.bed-option.active,
+.bath-option.active {
+  background-color: #edf1f5;
+  color: #0f0f0f;
+  text-decoration: underline; /* Add underline */
 }

@@ -9,7 +9,7 @@ import image from  "./bground.jpg"
 const Home = () => {
   return (
     <>
-     <h2 className="outer-heading">Find Your Dream Homes</h2>
+    
       <Hero />
        
 
