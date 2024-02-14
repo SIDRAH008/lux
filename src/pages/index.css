@@ -18,7 +18,7 @@
   justify-content: space-between;
   align-items: center;
   gap: 10px;
-  padding: 10px; /* Adjust padding as needed */
+  padding: 9px; /* Adjust padding as needed */
   background-color: #0f0f0f;
   color: #ccc;
   position: fixed; /* Set position to fixed */
