@@ -42,9 +42,13 @@ const SearchFilter = () => {
   };
 
   return (
+    
+    
     <div className="search-filter">
-      
+     <h1 className="heading">Find Your Dream House</h1>
+
       <div className="filter-container">
+     
         <div className="filter-options">
         <div className="first-row">
           <div className="property-type">
@@ -87,12 +91,13 @@ const SearchFilter = () => {
           <div className="button">
             <button
               type="button"
-              className="btn"
+              className="btnn"
               onClick={() => console.log('Performing search...')}
             >
               Search
             </button>
           </div>
+          
         </div>
       </div>
     </div></div>
