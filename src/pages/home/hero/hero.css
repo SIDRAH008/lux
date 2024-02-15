@@ -1,20 +1,18 @@
 .search-filter {
-  background-image: url('back.jpg');
+  background-image: url('bgg.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   display: flex;
   justify-content: center;
-  align-items: center;
   height: 100vh; /* Adjust the height as needed */
   background-color: #f2f2f2;
   flex-direction: column; /* Added to make the container a column */
 }
-
-.heading {
-  font-size: 24px;
+.head {
+  font-size: 30px;
   margin-bottom: 10px; 
-  color: #d4d107;
+  color: #0e0e0d;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 .para {
@@ -22,78 +20,57 @@
   font-weight: bold;
   color: #141414;
   margin-bottom: 20px;
-  text-align: center;
+  
 }
 
 .filter-container {
+  padding: 20px;
   background-color: #202020;
-  opacity: 0.7;
-  border-radius: 5px;
+
+  border-radius: 2px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   padding: 20px;
-  width: 80%;
+  width: 60%;
   max-width: 1000px;
-  margin-top: 20px; /* Adjust the margin as needed */
+  margin-top: 30px; /* Adjust the margin as needed */
 }
-
-.filter-options {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 20px;
-}
-
-.first-row,
-.second-row {
-  display: flex;
-  gap: 20px;
-}
-
 .property-type,
 .location,
-.rent-buy,
+.rent-buy {
+  flex: 1; /* Equal width for all three fields in the first row */
+}
+
 .beds-baths,
 .price-field,
 .area-field,
 .button {
-  flex: 1;
-}
-
-.property-type,
-.rent-buy,
-.beds-baths,
-.price-field,
-.area-field {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.property-type select,
-.rent-buy select,
-.beds-baths select {
-  margin-right: 10px;
+  flex: 1; /* Equal width for all four fields in the second row */
 }
 
 .location input {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 14px;
+  width: 90%; /* Full width for the location input field */
+  height: 40px; /* Adjust the height as needed */
 }
-
+.filter-options {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px; /* Adjust the gap between rows as needed */
+}
+.first-row,
+.second-row {
+  display: flex;
+  gap: 10px; /* Adjust the gap between elements as needed */
+}
 /* Media Query for mobile devices */
 @media (max-width: 768px) {
   .filter-container {
     width: 90%; /* Adjust the width as needed */
   }
-
   .first-row,
   .second-row {
     flex-direction: column;
   }
-
   .property-type,
   .rent-buy,
   .beds-baths,
