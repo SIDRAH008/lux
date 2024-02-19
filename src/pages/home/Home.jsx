@@ -5,7 +5,6 @@ import step2 from "../../component/Images/step-2.jfif";
 import step3 from "../../component/Images/step-3.jfif";
 //import "./Home.css"; // Import your custom CSS file for Home if needed
 import image from  "./bground.jpg"
-import DubaiRealEstate from "./location/Location";
 
 const Home = () => {
   return (
@@ -107,7 +106,7 @@ const Home = () => {
           </div>
         </section>
         </div>
-        <DubaiRealEstate/>
+      
       <Awards />
       
       </>
