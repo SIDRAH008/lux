@@ -97,8 +97,15 @@ const SearchFilter = () => {
               Search
             </button>
           </div>
+          </div>
+          <div className="third-row">
+            <button className="drive">
+            Search 2.0 Find home by drive time 
+            </button>
+          </div>
+
           
-        </div>
+        
       </div>
     </div></div>
   );
